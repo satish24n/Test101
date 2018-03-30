@@ -26,8 +26,7 @@
 							<suiteXmlFile>testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
-				</plugin>
-			
+				</plugin>			
 			</plugins>
 		</pluginManagement>
 	</build>
@@ -38,7 +37,6 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.11.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
