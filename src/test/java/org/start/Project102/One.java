@@ -3,13 +3,16 @@ package org.start.Project102;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-public class One {
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
-	@Test
-	public void one_tc1() {
+public class One {
+	public ExtentReports extentReports;
+	public ExtentTest extentTest;
+	
+	@Test public void one_tc1() {
 		System.out.println("one tc_01");
 	}
 
@@ -31,10 +34,12 @@ public class One {
 
 	@Test
 	public void sg() throws InterruptedException {
+		extentReports = new ExtentReports("./Reports/report.html", true);
+		extentReports.addSystemInfo("Author Name ", "Satish Rathore");
 		System.setProperty("webdriver.chrome.driver", "E:/softsel/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html");
-//		driver.findElement(By.id("eroor")).click();
+		 driver.findElement(By.id("eroor")).click();
 		Thread.sleep(3000);
 		driver.quit();
 	}
