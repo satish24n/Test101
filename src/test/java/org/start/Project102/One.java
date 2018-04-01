@@ -1,5 +1,6 @@
 package org.start.Project102;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -33,7 +34,7 @@ public class One {
 		System.setProperty("webdriver.chrome.driver", "E:/softsel/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html");
-
+		driver.findElement(By.id("eroor")).click();
 		Thread.sleep(3000);
 		driver.quit();
 	}
